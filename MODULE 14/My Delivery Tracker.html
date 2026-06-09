@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Order Tracker</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: aliceblue;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 { color: #2c7be5; }
+
+    button {
+      background: #2c7be5;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    div {
+      border: 1px solid #2c7be5;
+      width: 280px;
+      margin: 6px auto;
+      padding: 8px 12px;
+      text-align: left;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>My Order Tracker</h1>
+
+  <button onclick="storeOrder()">Save Order</button>
+  <button onclick="trackDelivery()">Start Delivery</button>
+
+  <div>JSON Data: <span id="json-data"></span></div>
+  <div>Product: <span id="item"></span></div>
+  <div>Cost: <span id="price"></span></div>
+  <div>Current Status: <span id="status"></span></div>
+  <div>Final Message: <span id="result"></span></div>
+
+  <script>
+
+    // Order object
+    let orderData = {
+      item: "Burger",
+      price: 7,
+      store: "Quick Bite Shop"
+    };
+
+    // Convert and restore JSON
+    function storeOrder() {
+      let jsonString = JSON.stringify(orderData);
+      let parsedOrder = JSON.parse(jsonString);
+
+      document.getElementById("json-data").innerHTML = jsonString;
+      document.getElementById("item").innerHTML = parsedOrder.item;
+      document.getElementById("price").innerHTML = "$" + parsedOrder.price;
+    }
+
+    // Delay helper function
+    function delay(ms) {
+      return new Promise(function(resolve) {
+        setTimeout(resolve, ms);
+      });
+    }
+
+    // Async delivery simulation
+    async function trackDelivery() {
+      document.getElementById("result").innerHTML = "";
+
+      document.getElementById("status").innerHTML = "Order confirmed!";
+
+      setTimeout(function() {
+        document.getElementById("status").innerHTML = "Food is being prepared...";
+      }, 1000);
+
+      await delay(3000);
+      document.getElementById("status").innerHTML = "On the way!";
+
+      await delay(2000);
+      document.getElementById("result").innerHTML = "Delivered successfully!";
+    }
+
+  </script>
+
+</body>
+</html>

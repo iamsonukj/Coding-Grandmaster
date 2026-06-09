@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Methods</h2>
+<h2>join() and pop() Example</h2>
+
+<p>
+The join() method converts array elements into a single string,
+and the pop() method removes the last item from an array.
+</p>
+
+<p id="joinResult"></p>
+<p id="beforePop"></p>
+<p id="afterPop"></p>
+
+<script>
+
+var items = ["Pen", "Pencil", "Eraser", "Sharpener"];
+
+// Join elements into a string
+document.getElementById("joinResult").innerHTML = items.join(" - ");
+
+// Show array before removing last element
+document.getElementById("beforePop").innerHTML = items;
+
+// Remove last element
+items.pop();
+
+// Show array after removing last element
+document.getElementById("afterPop").innerHTML = items;
+
+</script>
+
+</body>
+</html>

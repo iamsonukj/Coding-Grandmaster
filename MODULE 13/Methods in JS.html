@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>JavaScript Text Functions</h2>
+    <p>Common String Operations</p>
+
+    <script>
+        var text = "WoNdErFuL";
+
+        document.write(text.toUpperCase());
+        document.write("<br>");
+
+        document.write(text.toLowerCase());
+        document.write("<br>");
+
+        document.write(text.startsWith('W'));
+        document.write("<br>");
+
+        // Test Method -> checks whether a pattern exists
+        var sentence = "I am learning JavaScript functions";
+        var pattern = new RegExp("JavaScript");
+
+        var output = pattern.test(sentence);
+
+        document.write(output);
+    </script>
+
+</body>
+</html>

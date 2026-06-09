@@ -1,0 +1,42 @@
+body {
+  background-color: forestgreen;
+  background-image: linear-gradient(to bottom, forestgreen, darkgreen);
+  background-repeat: no-repeat;
+  background-position: top center;
+  font-family: Arial, sans-serif;
+}
+
+.page-header {
+  background-image: linear-gradient(to right, seagreen, lightgreen);
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+}
+
+.fact-card {
+  background-color: darkolivegreen;
+  border-radius: 12px;
+  color: white;
+}
+
+.fact-card h2 {
+  color: lightgreen;
+}
+
+.leaf {
+  width: 60px;
+  height: 60px;
+  background-color: limegreen;
+  border-radius: 50%;
+  animation: sway 2s infinite alternate;
+}
+
+@keyframes sway {
+  from { background-color: limegreen; }
+  to   { background-color: palegreen; }
+}
+
+.footer-text {
+  text-align: center;
+  color: lightgreen;
+}

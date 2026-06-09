@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Multiply each element of the array by 10:</p>
+
+<p id="output"></p>
+
+<script>
+
+var values = [32, 7, 18, 50];
+
+function multiplyByTen(item) {
+  return item * 10;
+}
+
+var resultArray = values.map(multiplyByTen);
+
+document.getElementById("output").innerHTML = resultArray;
+
+</script>
+
+</body>
+</html>

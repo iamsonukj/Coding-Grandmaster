@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>A function can work with variables declared inside its own scope.</p>
+
+<button type="button" onclick="showResult()">
+    Display Result
+</button>
+
+<p id="output"></p>
+<p id="output1"></p>
+
+<script>
+var globalValue = 6;
+
+function showResult() {
+    var localValue = 3;
+
+    document.getElementById("output").innerHTML =
+    globalValue * localValue;
+}
+
+document.getElementById("output1").innerHTML =
+"Global variable value: " + globalValue;
+</script>
+
+</body>
+</html>

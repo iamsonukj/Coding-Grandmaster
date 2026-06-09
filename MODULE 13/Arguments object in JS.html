@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Finding the largest number using JavaScript Arguments Object</p>
+
+<p id="output"></p>
+
+<script>
+    function getMaximum() {
+        var i;
+        var maximum = 0;
+
+        for (i = 0; i < arguments.length; i++) {
+            if (arguments[i] > maximum) {
+                maximum = arguments[i];
+            }
+        }
+
+        return maximum;
+    }
+
+    document.getElementById("output").innerHTML =
+        getMaximum(7, 12, 3);
+</script>
+
+</body>
+</html>

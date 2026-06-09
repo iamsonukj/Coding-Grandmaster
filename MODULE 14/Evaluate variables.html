@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to run and evaluate JavaScript expressions dynamically.</p>
+
+<button onclick="runCode()">Try it</button>
+
+<p id="output"></p>
+
+<script>
+
+function runCode() {
+    var num1 = 15;
+    var num2 = 25;
+
+    var result1 = eval("num1 + num2") + "<br>";
+    var result2 = eval("5 * 3") + "<br>";
+    var result3 = eval("num2 - num1") + "<br>";
+
+    var finalResult = result1 + result2 + result3;
+
+    document.getElementById("output").innerHTML = finalResult;
+}
+
+</script>
+
+</body>
+</html>

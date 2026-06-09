@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Slideshow</title>
+</head>
+
+<body>
+
+    <!-- Slideshow Section -->
+    <section>
+        <img class="slide" src="pic1.png" style="height:500px;">
+        <img class="slide" src="pic2.jpg" style="height:500px;">
+    </section>
+
+    <script>
+        // Auto image slider - changes every 3 seconds
+        var index = 0;
+
+        function startCarousel() {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            index++;
+
+            if (index > slides.length) {
+                index = 1;
+            }
+
+            slides[index - 1].style.display = "block";
+
+            setTimeout(startCarousel, 3000);
+        }
+
+        startCarousel();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Wildlife Park</title>
+
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background: aliceblue;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #ff5a43;
+    }
+
+    #park {
+      border: 2px solid #ff5a43;
+      width: 300px;
+      margin: 16px auto;
+      padding: 12px;
+      border-radius: 10px;
+      background: white;
+    }
+
+    .section {
+      border: 1px solid #ff5a43;
+      margin: 6px 0;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-align: left;
+    }
+
+    button {
+      background: #ff5a43;
+      color: white;
+      padding: 10px 24px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>My Wildlife Park</h1>
+  <p>Use JavaScript DOM methods to place animals into their enclosures!</p>
+
+  <!--
+    DOM Tree: park is the parent element node.
+    Section divs are child nodes. Animal names inside spans are text nodes.
+  -->
+
+  <div id="park">
+    <div class="section">Zone A: <span id="zoneA"></span></div>
+    <div class="section">Zone B: <span id="zoneB"></span></div>
+    <div class="section">Zone C: <span id="zoneC"></span></div>
+    <div class="section">Total Animals: <span id="totalAnimals"></span></div>
+  </div>
+
+  <br>
+
+  <button onclick="openPark()">Open the Park!</button>
+
+  <p id="status"></p>
+
+  <script>
+
+    function openPark() {
+
+      /* Task 1: Add first animal */
+      document.getElementById("zoneA").innerHTML = "Tiger";
+
+      /* Task 2: Add second animal */
+      document.getElementById("zoneB").innerHTML = "Giraffe";
+
+      /* Task 3: Add third animal */
+      document.getElementById("zoneC").innerHTML = "Panda";
+
+      /* Task 4: Show total animals */
+      document.getElementById("totalAnimals").innerHTML = "3";
+
+      /* Task 5: Change background color */
+      document.getElementById("park").style.backgroundColor = "lightyellow";
+
+      /* Task 6: Display page title using document object */
+      document.getElementById("status").innerHTML =
+        document.title + " is now open for visitors!";
+
+    }
+
+  </script>
+
+</body>
+</html>

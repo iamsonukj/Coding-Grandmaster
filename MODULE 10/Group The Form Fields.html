@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Club Membership Form</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <form>
+      <fieldset>
+        <!-- The fieldset tag groups related form elements inside a bordered section -->
+        <legend>Membership Details:</legend>
+
+        <label>Member Name:</label>
+        <!-- The placeholder attribute provides a hint about the expected input -->
+        <input type="text" id="memberName" placeholder="Enter Your Name"><br><br>
+
+        <label>Contact Email:</label>
+        <input type="text" id="contactEmail"><br><br>
+
+        <label>Membership Type:</label><br>
+        <input type="radio" id="basic" name="membership" value="Basic">Basic<br>
+        <input type="radio" id="premium" name="membership" value="Premium">Premium<br><br>
+
+        <label>Joining Date:</label>
+        <input type="date" id="joiningDate" name="joiningDate"><br><br>
+
+      </fieldset>
+    </form>
+  </body>
+</html>

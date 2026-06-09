@@ -1,0 +1,15 @@
+/* Body styling */
+body {
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+}
+
+/* Dice styling */
+#dice {
+    font-size: 320px;
+}
+
+/* Hover effect on dice */
+#dice:hover {
+    cursor: pointer;
+}

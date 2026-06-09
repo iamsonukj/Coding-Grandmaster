@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions Example</h2>
+
+<p>Perform a calculation and display the final result.</p>
+
+<p id="output"></p>
+
+<script>
+
+function sum(x, y) {
+    return x + y;
+}
+
+function getAverage(x, y) {
+    return sum(x, y) / 2;
+}
+
+let finalResult = getAverage(15, 25);
+
+document.getElementById("output").innerHTML = finalResult;
+
+</script>
+
+</body>
+</html>
